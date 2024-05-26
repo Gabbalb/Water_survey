@@ -42,6 +42,17 @@
                 <div class="sm:flex sm:gap-4">
                     <a
                             class=" text-white rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
+                            href="lista_form_utente.php"
+                    >
+                        Go back
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="sm:flex sm:gap-4">
+                    <a
+                            class=" text-white rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
                             href="index.php"
                     >
                         Logout
@@ -52,7 +63,7 @@
 
 
 
-<!--
+
 
 <div class="container bg-gray-100 grid grid-cols-1 gap-1">
 
@@ -68,11 +79,29 @@
 
     </a>
 </div>
--->
+
 
 <img src="https://i.pinimg.com/originals/47/15/5c/47155c174fd7600e853c76a8a1fd89f7.gif" alt="Animated GIF">
 
 
+<div class="container mx-auto bg-gray-100 grid grid-cols-1 gap-1 p-4">
+
+    <?php
+     $i = 1;
+     foreach ($questions as $question): ?>
+    <article class="flex flex-col items-center justify-between rounded-lg border border-gray-100 bg-white p-6 w-full mx-auto">
+        <div class="w-full">
+            <p class="text-sm mb-4 text-gray-500">Question number <?= $i ?></p>
+            <p class="text-l font-medium text-gray-900 mb-10"><?=$question['domanda']?></p>
+
+            <p class="text-sm mb-4 text-gray-800">Your answer: <?=$answers[$i - 1]['valore']?></p>
+
+
+        </div>
+    </article>
+    <?php $i++; endforeach; ?>
+
+</div>
 
 
 </body>

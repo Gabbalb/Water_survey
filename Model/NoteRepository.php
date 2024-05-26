@@ -18,6 +18,19 @@ class NoteRepository
             ]);
         }
     }
+
+    public static function listAnswersByForm($userId, $formId): array {
+        $pdo = Connection::getInstance();
+        $stmt = $pdo -> prepare('
+        SELECT id_domanda, valore FROM risposte
+WHERE id_utente = :id_utente AND id_form = :id_form');
+        $stmt -> execute([
+            'id_utente' => $userId,
+            'id_form' => $formId,
+        ]);
+        return $stmt -> fetchAll();
+    }
+
     public static function listAll($id): array
     {
         try {

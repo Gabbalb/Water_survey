@@ -33,8 +33,9 @@ if(isset($_GET['id'])) {
 
 
 $questions = Model\NoteRepository::listQuestionByForm($id_form);
-
+$answers= NoteRepository::listAnswersByForm($id_utente, $id_form);
 
 echo $template->render('review', [
     'questions' => $questions,
+    'answers' => $answers,
 ]);

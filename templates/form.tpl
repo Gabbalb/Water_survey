@@ -25,6 +25,16 @@
 
                 </nav>
             </div>
+            <div class="flex items-center gap-4">
+                <div class="sm:flex sm:gap-4">
+                    <a
+                            class=" text-white rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
+                            href="lista_form_utente.php"
+                    >
+                        Go back
+                    </a>
+                </div>
+            </div>
 
             <div class="flex items-center gap-4">
                 <div class="sm:flex sm:gap-4">

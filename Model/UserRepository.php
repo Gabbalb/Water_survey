@@ -95,7 +95,7 @@ class UserRepository
     {
         try {
             $pdo = Connection::getInstance();
-            $sql = 'SELECT * FROM sondaggio_acqua.users'; // Assicurati che il nome della colonna sia corretto
+            $sql = 'SELECT * FROM water.users'; // Assicurati che il nome della colonna sia corretto
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
 
