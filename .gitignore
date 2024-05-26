@@ -1,0 +1,48 @@
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+#Codeblocks project files
+*.layout
+*.depend
+
+#java specific
+*.class
+
+#auxiliary Dia files
+*~
+
+# Executables
+*.exe
+*.out
+
+# File di lock
+*.lock
+
+# Progetti esclusi
+vendor/
+.idea/
+.idea/webServers.xml
+config.php
+composer.json
