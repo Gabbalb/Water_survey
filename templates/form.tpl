@@ -89,7 +89,7 @@
 
     <div>
         <div class=" place-content-center flex items-center justify-between rounded-lg border border-gray-100 bg-white p-6 mr-20 ml-20 mt-3">
-            <button onclick="toggleModal(true)" class="w-full py-2 ml-2 shadow-sm rounded-md bg-indigo-600 text-white mt-4 flex items-center justify-center">
+            <button type="button" onclick="toggleModal(true)" class="w-full py-2 ml-2 shadow-sm rounded-md bg-indigo-600 text-white mt-4 flex items-center justify-center">
                 Submit
             </button>
         </div>
@@ -111,10 +111,10 @@
                             Ending the survey will record all the answers and, after saving, they can not be changed. Before confirming exit control all your answers
                         </p>
                         <div class="items-center gap-2 mt-3 text-sm sm:flex">
-                            <a href="lista_form_utente.php"> <button onclick="toggleModal(false)" class="w-full mt-2 p-2.5 flex-1 text-white bg-red-600 rounded-md ring-offset-2 ring-red-600 focus:ring-2">
+                            <a href="lista_form_utente.php"> <button type="button" onclick="toggleModal(false)" class="w-full mt-2 p-2.5 flex-1 text-white bg-red-600 rounded-md ring-offset-2 ring-red-600 focus:ring-2">
                                     Finish Test
                                 </button></a>
-                            <button onclick="toggleModal(false)" aria-label="Close" class="w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md border ring-offset-2 ring-indigo-600 focus:ring-2">
+                            <button type="button" onclick="toggleModal(false)" aria-label="Close" class="w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md border ring-offset-2 ring-indigo-600 focus:ring-2">
                                 Review your answers
                             </button>
                         </div>
@@ -124,13 +124,8 @@
         </div>
     </div>
 
-</div>
+    </div>
 </form>
-
-
-
-
-
 
 <script>
     // Seleziona tutti gli input di tipo range nella pagina
@@ -152,8 +147,6 @@
         rangeInput.dispatchEvent(new Event('input'));
     });
 
-
-
     function toggleModal(open) {
         const modal = document.getElementById('modal');
         if (open) {
@@ -162,8 +155,6 @@
             modal.style.display = 'none';
         }
     }
-
-
 </script>
 
 </body>
