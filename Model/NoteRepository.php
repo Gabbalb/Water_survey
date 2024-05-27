@@ -6,6 +6,14 @@ use Util\Connection;
 class NoteRepository
 {
 
+    public static function creaForm($title, $desc) {
+        $pdo = Connection::getInstance();
+        $stmt = $pdo -> prepare('INSERT INTO form (titolo, descrizione) VALUES (:titolo, :descrizione)');
+        $stmt -> execute([
+            'titolo' => $title,
+            'descrizione' => $desc,
+        ]);
+    }
     public static function salvaRisposte($userId, $formId, $questions, $risposte) {
         $pdo = Connection::getInstance();
         $stmt = $pdo->prepare('INSERT INTO risposte (valore, id_utente, id_form, id_domanda) VALUES (:valore, :id_utente, :id_form, :id_domanda)');

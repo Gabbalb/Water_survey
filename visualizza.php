@@ -61,6 +61,10 @@ if (isset($_GET['query'])){
             'utenti' => $utenti
 
         ]);
+    } elseif($_GET['query'] == 4) {
+        echo $template -> render('crea_form', [
+
+        ]);
     } else {
         echo $template->render('note', [
             'results' => $results,
