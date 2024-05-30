@@ -46,6 +46,17 @@
                         />
                     </svg>
                 </a>
+                <br>
+
+                <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+                    <a href="visualizza.php?action=back"><button
+                            class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                    >
+                            Go back
+                    </button>
+                    </a>
+
+                </div>
 
                 <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                     ADD a new Form to IWS

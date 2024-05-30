@@ -225,7 +225,7 @@
 
         </article></a> <!--CREA FORM-->
 
-    <a href="visualizza.php?query=2"><article class="rounded-lg border border-gray-100 bg-white p-6">
+    <a href="visualizza.php?query=3"><article class="rounded-lg border border-gray-100 bg-white p-6">
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-sm text-gray-500">Crea</p>

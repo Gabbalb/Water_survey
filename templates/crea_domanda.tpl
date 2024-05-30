@@ -46,16 +46,27 @@
                         />
                     </svg>
                 </a>
+                <br>
+
+                <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+                    <a href="visualizza.php?action=back"><button
+                                class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                        >
+                            Go back
+                        </button>
+                    </a>
+
+                </div>
 
                 <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                    ADD a New Question to IWS
+                    Add a new Question to IWS
                 </h1>
 
                 <p class="mt-4 leading-relaxed text-gray-500">
                     Add a new question
                 </p>
 
-                <form action="crea_form.php" method="post" class="mt-8 grid grid-cols-6 gap-6">
+                <form action="crea_domanda.php" method="post" class="mt-8 grid grid-cols-6 gap-6">
 
 
                     <div class="col-span-6">
@@ -63,27 +74,30 @@
 
                         <input
                                 type="text"
-                                id="question"
+                                id="title"
                                 name="question"
                                 class=" p-3 mt-1 w-full rounded-md border-solid border-2 border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                         />
                     </div>
 
-                    echo '<select name="form_id">';
-                        foreach ($forms as $form) {
-                        echo '<option value="' . $form['id'] . '">' . htmlspecialchars($form['titolo']) . '</option>';
-                        }
-                        echo '</select>'
-                    <select name="form_id">
-                        <?php foreach ($forms as form): ?>
-                        <option value="<?=$form['id']?>"><?=$form['domanda']?></option>
-                        <?php endforeach; ?>
-                    </select>
+                    <div class="col-span-6">
+                        <label for="form_id" class="block text-sm font-medium text-gray-700"> Select Form </label>
+                        <select
+                                name="form_id"
+                                id="form_id"
+                                class=" p-3 mt-1 w-full rounded-md border-solid border-2 border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                        >
+                            <?php foreach ($forms as $form): ?>
+                            <option value="<?= $form['id'] ?>"><?= $form['titolo'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
 
 
                     <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
                         <button
-                                type="submit" name="register" class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                                type="submit" name="add_question" class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
                         >
                             Confirm Submission
                         </button>
