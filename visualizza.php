@@ -37,6 +37,14 @@ if (isset($_GET['action']) && $_GET['action'] == 'back') {
         exit();
     }
 }
+if (isset($_GET['action']) && $_GET['action'] == 'deleteform') {
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        \Model\NoteRepository::eliminaform($id);
+        header('Location: visualizza.php?query=2');
+        exit();
+    }
+}
 
 
 if (isset($_GET['query'])){

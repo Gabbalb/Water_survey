@@ -222,4 +222,38 @@ AND id_form = :id';
     }
 
 
+    public static function eliminaform($id)
+    {
+        $pdo = Connection::getInstance();
+
+        try {
+            $pdo = Connection::getInstance();
+
+            // Begin a transaction to ensure data integrity
+            $pdo->beginTransaction();
+
+            // Delete related records in the `domande` table
+            $sqlDeleteDomande = 'DELETE FROM domande WHERE id_form = :id';
+            $stmtDeleteDomande = $pdo->prepare($sqlDeleteDomande);
+            $stmtDeleteDomande->execute(['id' => $id]);
+
+            // Delete the form record in the `form` table
+            $sqlDeleteForm = 'DELETE FROM form WHERE id = :id';
+            $stmtDeleteForm = $pdo->prepare($sqlDeleteForm);
+            $stmtDeleteForm->execute(['id' => $id]);
+
+            // Commit the transaction
+            $pdo->commit();
+
+            return true;
+        } catch (PDOException $e) {
+            // Rollback the transaction if something failed
+            $pdo->rollBack();
+            error_log("Errore durante l'eliminazione del form: " . $e->getMessage());
+            return false;
+        }
+    }
+
+
+
 }
