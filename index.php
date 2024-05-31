@@ -11,6 +11,8 @@ use Model\NoteRepository;
 
 $template = new League\Plates\Engine('templates', 'tpl');
 
+// Ottieni il risultato della verifica delle credenziali, che include lo stato di successo e l'id_permesso
+
 
 
 // Controlla se sono stati inviati dati dal modulo di accesso
@@ -18,8 +20,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-
-    // Ottieni il risultato della verifica delle credenziali, che include lo stato di successo e l'id_permesso
     $result = UserRepository::verificaCredenziali($username, $password);
     $nusers = NoteRepository::nusers();
     $nform = NoteRepository::nform();
@@ -70,3 +70,4 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     // Se non sono stati inviati dati dal modulo di accesso, mostra il modulo di accesso
     echo $template->render('login');
 }
+

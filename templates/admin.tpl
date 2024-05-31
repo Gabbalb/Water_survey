@@ -75,10 +75,10 @@
 <section class="bg-gray-100 ">
     <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Una dashboard tutta per te...</h2>
+            <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Here it is the Dashboard...</h2>
 
             <p class="mt-4 text-gray-500 sm:text-xl">
-                Le spese dei tuoi dipendenti stanno andando così
+                All the informations about your forms
             </p>
         </div>
 

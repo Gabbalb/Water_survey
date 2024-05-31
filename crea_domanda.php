@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     \Model\NoteRepository::creaDomanda($question, $form_id);
 
     // Reindirizza alla pagina di successo
-    echo $template->render('login', [
+    echo $template->render('successQ', [
 
     ]);
     exit(0); // Assicura che lo script termini dopo il reindirizzamento
