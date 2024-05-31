@@ -69,9 +69,11 @@
     </a>
 </div>
 
-<form method="get">
-    <div class="container mx-auto bg-gray-100 grid grid-cols-1 gap-1 p-4">
+<form method="get" >
 
+     <input type="hidden" name="id" value="<?= $id_form ?>">
+
+    <div class="container mx-auto bg-gray-100 grid grid-cols-1 gap-1 p-4">
         <?php
      $i = 1;
      foreach ($questions as $question): ?>
@@ -114,11 +116,11 @@
                         Ending the survey will record all the answers and, after saving, they can not be changed. Before confirming exit control all your answers
                     </p>
                     <div class="items-center gap-2 mt-3 text-sm sm:flex">
-                        <a href="lista_form_utente.php">
-                            <button type="button" onclick="toggleModal(false)" class="btn btn-error w-full mt-2 p-2.5 flex-1 text-white bg-red-600 rounded-md ring-offset-2 ring-red-600 focus:ring-2">
-                                Finish Test
+
+                            <button type="submit" onclick="toggleModal(false)" class="btn btn-error w-full mt-2 p-2.5 flex-1 text-white bg-red-600 rounded-md ring-offset-2 ring-red-600 focus:ring-2">
+                                <a href="lista_form_utente.php">Finish Test</a>
                             </button>
-                        </a>
+
                         <button type="button" onclick="toggleModal(false)" aria-label="Close" class="w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md border ring-offset-2 ring-indigo-600 focus:ring-2">
                             Review your answers
                         </button>

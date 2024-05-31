@@ -81,8 +81,6 @@
 </div>
 
 
-<img src="https://i.pinimg.com/originals/47/15/5c/47155c174fd7600e853c76a8a1fd89f7.gif" alt="Animated GIF">
-
 
 <div class="container mx-auto bg-gray-100 grid grid-cols-1 gap-1 p-4">
 
