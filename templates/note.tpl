@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <title>Nota Spese</title>
+    <title>Domande</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet">
@@ -14,7 +14,7 @@
 <body class="bg-gray-100">
 <header class="bg-white">
     <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-2xl font-bold">Nota spese</h1>
+        <h1 class="text-2xl font-bold">Lista Domande</h1>
 
         <div class="flex flex-1 items-center justify-end md:justify-between">
             <nav aria-label="Global" class="hidden md:block">
@@ -46,7 +46,7 @@
         <table class="w-full table-auto text-sm text-left">
             <thead class="bg-gray-50 text-gray-600 font-medium border-b">
             <tr>
-                <?php foreach ($headers as $head): ?>
+                <?php foreach ($headers1 as $head): ?>
                 <th class="py-3 px-6"><?= $head ?></th>
                 <?php endforeach; ?>
             </tr>
@@ -61,6 +61,26 @@
             <?php endforeach; ?>
             </tbody>
         </table>
+    </div>
+    <div class="mt-12 shadow-sm border rounded-lg overflow-x-auto">
+        <table class="w-full table-auto text-sm text-left">
+            <thead class="bg-gray-50 text-gray-600 font-medium border-b">
+            <tr>
+                <?php foreach ($headers2 as $head): ?>
+                <th class="py-3 px-6"><?= $head ?></th>
+                <?php endforeach; ?>
+            </tr>
+            </thead>
+            <tbody class="text-gray-600 divide-y">
+            <?php foreach ($questions as $question): ?>
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap"><?= $question['domanda'] ?></td>
+                <td class="px-6 py-4 whitespace-nowrap"><?= $question['id_form'] ?></td>
+            </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+
     </div>
 </div>
 </body>

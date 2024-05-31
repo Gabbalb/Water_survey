@@ -48,7 +48,8 @@ if (isset($_GET['query'])){
             $results = \Model\NoteRepository::query1();
             break;
         case 2:
-            $headers = ['id', 'escrizione', 'data', 'importo', 'utente', 'tipologia'];
+            $headers1 = ['id', 'tipologia', 'descrizione'];
+            $headers2 = ['domanda', 'id_form'];
             $results = \Model\NoteRepository::query2();
             break;
     }
@@ -61,11 +62,23 @@ if (isset($_GET['query'])){
             'utenti' => $utenti
 
         ]);
-    } else {
+    } elseif($_GET['query'] == 3) {
+        $forms = NoteRepository::getForms();
+        echo $template -> render('crea_domanda', [
+            'forms' => $forms,
+        ]);
+    } elseif ($_GET['query'] == 4) {
+        echo $template -> render('crea_form', [
+
+        ]);
+    } elseif ($_GET['query'] == 2) {
+        $questions = NoteRepository::getQuestions();
         echo $template->render('note', [
             'results' => $results,
-            'headers' => $headers,
-            'utenti' => $utenti
+            'headers1' => $headers1,
+            'headers2' => $headers2,
+            'utenti' => $utenti,
+            'questions' => $questions,
 
         ]);
     }

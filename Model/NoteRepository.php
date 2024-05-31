@@ -6,6 +6,37 @@ use Util\Connection;
 class NoteRepository
 {
 
+    public static function getQuestions() {
+        $pdo = Connection::getInstance();
+        $sql = "SELECT domanda, id_form FROM domande";
+        $stmt = $pdo -> query($sql);
+        return $stmt -> fetchAll();
+    }
+    public static function getForms() {
+        $pdo = Connection::getInstance();
+        $sql = "SELECT id, titolo FROM form";
+        $stmt = $pdo -> query($sql);
+        return $stmt -> fetchAll();
+    }
+
+    public static function creaForm($title, $desc) {
+        $pdo = Connection::getInstance();
+        $stmt = $pdo -> prepare('INSERT INTO form (titolo, descrizione) VALUES (:titolo, :descrizione)');
+        $stmt -> execute([
+            'titolo' => $title,
+            'descrizione' => $desc,
+        ]);
+    }
+
+    public static function creaDomanda($question, $id_form) {
+        $pdo = Connection::getInstance();
+        $sql = "INSERT INTO domande (id_form, domanda) VALUES (:id_form, :domanda)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'id_form' => $id_form,
+            'domanda' => $question,
+        ]);
+    }
     public static function salvaRisposte($userId, $formId, $questions, $risposte) {
         $pdo = Connection::getInstance();
         $stmt = $pdo->prepare('INSERT INTO risposte (valore, id_utente, id_form, id_domanda) VALUES (:valore, :id_utente, :id_form, :id_domanda)');
