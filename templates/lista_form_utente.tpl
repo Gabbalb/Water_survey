@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-
+    <style>
+        .container .badge {
+            position: absolute;
+            top: 1.5rem; /* Modifica secondo le tue necessità */
+            right: 1.5rem; /* Modifica secondo le tue necessità */
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
 
@@ -51,12 +57,12 @@
 
     foreach ($non_completati as $form) {
     echo '<a href="form.php?id=' . $form['id'] . '" class="titolo">
-    <article class="flex items-end justify-between rounded-lg border border-gray-100 bg-white p-6 mr-6 ml-6 mt-3">
+    <article class="relative flex items-end justify-between rounded-lg border border-gray-100 bg-white p-6 mr-6 ml-6 mt-3">
         <div>
             <p class="text-xl font-medium text-gray-900">' . $form['titolo'] . '</p>
             <p class="text-sm text-gray-500"> ' . $form['descrizione'] . ' </p>
         </div>
-        <div class="inline-flex gap-2 rounded-full pl-1.5 pr-1.5 bg-red-100  text-red-600">
+        <div class="badge absolute top-6 right-6 inline-flex gap-2 rounded-full pl-1.5 pr-1.5 bg-red-100 text-red-600">
             <span class="text-xs font-medium">  Not completed  </span>
         </div>
     </article>
@@ -64,6 +70,8 @@
     }
     ?>
 </div>
+
+
 
 
 
@@ -84,16 +92,13 @@
         foreach ($completati as $form) {
     echo '<a href="review.php?id=' . $form['id'] . '" class="titolo">
 
-    <article class="flex items-end justify-between rounded-lg border border-gray-100 bg-white p-6 mr-6 ml-6 mt-3">
+    <article class="relative flex items-end justify-between rounded-lg border border-gray-100 bg-white p-6 mr-6 ml-6 mt-3">
         <div>
             <p class="text-xl font-medium text-gray-900">' . $form['titolo'] . '</p>
-            <p class="text-sm text-gray-500">' . $form['descrizione'] . '</p>
-
+            <p class="text-sm text-gray-500"> ' . $form['descrizione'] . ' </p>
         </div>
-
-        <div class="inline-flex gap-2 rounded-full pl-2 pr-2 bg-green-100 p-1 text-green-600">
-
-            <span class="text-xs font-medium"> Completed </span>
+        <div class="badge absolute top-6 right-6 inline-flex gap-2 rounded-full pl-1.5 pr-1.5 bg-green-100 text-green-600">
+            <span class="text-xs font-medium">  Completed  </span>
         </div>
     </article>
 

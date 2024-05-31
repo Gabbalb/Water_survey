@@ -129,6 +129,7 @@ if(isset($_GET['id'])) {
 } else {
     $id_form = 1;
 }
+var_dump($id_form);
 
 
 $questions = Model\NoteRepository::listQuestionByForm($id_form);

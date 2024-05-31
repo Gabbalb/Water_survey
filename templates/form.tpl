@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module"> import preline from 'https://cdn.jsdelivr.net/npm/preline@2.1.0/+esm' </script>
 </head>
@@ -26,25 +30,26 @@
                 </nav>
             </div>
             <div class="flex items-center gap-4">
-                <div class="sm:flex sm:gap-4">
-                    <a
-                            class=" text-white rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                            href="lista_form_utente.php"
-                    >
+                <a
+                        href="lista_form_utente.php"
+                >
+                    <button class="btn btn-info sm:flex sm:gap-4">
+
                         Go back
-                    </a>
-                </div>
+                    </button>
+                </a>
             </div>
 
             <div class="flex items-center gap-4">
-                <div class="sm:flex sm:gap-4">
-                    <a
-                            class=" text-white rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                            href="index.php"
-                    >
+                <a
+                        href="index.php"
+                >
+                    <button class="btn btn-info sm:flex sm:gap-4">
+
                         Logout
-                    </a>
-                </div>
+
+                    </button>
+                </a>
             </div>
 </header>
 
@@ -86,38 +91,37 @@
 
     </div>
 
+    <div class="flex items-center justify-center rounded-lg border border-gray-100 p-6 mx-6 mt-3">
+        <button type="button" onclick="toggleModal(true)" class="w-full py-2 shadow-sm btn btn-info rounded-md bg-indigo-600 text-black flex items-center justify-center">
+            Submit
+        </button>
+    </div>
 
-    <div>
-        <div class=" place-content-center flex items-center justify-between rounded-lg border border-gray-100 bg-white p-6 mr-20 ml-20 mt-3">
-            <button type="button" onclick="toggleModal(true)" class="w-full py-2 ml-2 shadow-sm rounded-md bg-indigo-600 text-white mt-4 flex items-center justify-center">
-                Submit
-            </button>
-        </div>
+    <div id="modal" class="fixed inset-0 w-full h-full" style="display: none;">
+        <div class="fixed inset-0 w-full h-full bg-black opacity-40" onclick="toggleModal(false)"></div>
 
-        <div id="modal" class="fixed inset-0 w-full h-full" style="display: none;">
-            <div class="fixed inset-0 w-full h-full bg-black opacity-40" onclick="toggleModal(false)"></div>
-
-            <div class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 w-full max-w-lg">
-                <div class="bg-white rounded-md shadow-lg px-4 py-6 sm:flex">
-                    <div class="flex items-center justify-center flex-none w-12 h-12 mx-auto bg-red-100 rounded-full">
-                        <!-- SVG Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <div class="mt-2 text-center sm:ml-4 sm:text-left">
-                        <h2 class="text-lg font-medium text-gray-800">Are you sure?</h2>
-                        <p class="mt-2 text-sm leading-relaxed text-gray-500">
-                            Ending the survey will record all the answers and, after saving, they can not be changed. Before confirming exit control all your answers
-                        </p>
-                        <div class="items-center gap-2 mt-3 text-sm sm:flex">
-                            <a href="lista_form_utente.php"> <button type="submit" onclick="toggleModal(false)" class="w-full mt-2 p-2.5 flex-1 text-white bg-red-600 rounded-md ring-offset-2 ring-red-600 focus:ring-2">
-                                    Finish Test
-                                </button></a>
-                            <button type="button" onclick="toggleModal(false)" aria-label="Close" class="w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md border ring-offset-2 ring-indigo-600 focus:ring-2">
-                                Review your answers
+        <div class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 w-full max-w-lg">
+            <div class="bg-white rounded-md shadow-lg px-4 py-6 sm:flex">
+                <div class="flex items-center justify-center flex-none w-12 h-12 mx-auto bg-red-100 rounded-full">
+                    <!-- SVG Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="mt-2 text-center sm:ml-4 sm:text-left">
+                    <h2 class="text-lg font-medium text-gray-800">Are you sure?</h2>
+                    <p class="mt-2 text-sm leading-relaxed text-gray-500">
+                        Ending the survey will record all the answers and, after saving, they can not be changed. Before confirming exit control all your answers
+                    </p>
+                    <div class="items-center gap-2 mt-3 text-sm sm:flex">
+                        <a href="lista_form_utente.php">
+                            <button type="button" onclick="toggleModal(false)" class="btn btn-error w-full mt-2 p-2.5 flex-1 text-white bg-red-600 rounded-md ring-offset-2 ring-red-600 focus:ring-2">
+                                Finish Test
                             </button>
-                        </div>
+                        </a>
+                        <button type="button" onclick="toggleModal(false)" aria-label="Close" class="w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md border ring-offset-2 ring-indigo-600 focus:ring-2">
+                            Review your answers
+                        </button>
                     </div>
                 </div>
             </div>
