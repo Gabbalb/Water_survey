@@ -36,9 +36,8 @@
                         <input type="text" placeholder="Search" class="w-full px-2 py-2 text-gray-500 bg-transparent rounded-md outline-none">
                     </div>
                 </li>
-                <li><a href="#" class="block text-gray-700 hover:text-gray-900">Home</a></li>
                 <li><a href="index.php" class="block text-gray-700 hover:text-gray-900">Logout</a></li>
-                <li><a href="#" class="block text-gray-700 hover:text-gray-900">Support</a></li>
+                <li><a href="mailto:zanoris54@gmail.com?subject=Support%20Request" class="block text-gray-700 hover:text-gray-900">Support</a></li>
                 <!-- Avatar and dropdown menu -->
             </ul>
         </nav>

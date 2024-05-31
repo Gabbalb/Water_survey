@@ -146,7 +146,7 @@ if (isset($_GET['question_1'])) {
     $email_user = Model\UserRepository::getEmail($username);
 
     //funzione temporaneamente commentata, altriemnti ho mille email
-    //invio_email($email_user, $risposte, $questions, $username);
+    invio_email($email_user, $risposte, $questions, $username);
 
 
 }

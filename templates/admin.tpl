@@ -59,10 +59,10 @@
 <body class="bg-gray-100">
 <div class="navbar">
     <div class="title">
-        <h1>Nota Spese Dashboard</h1>
+        <h1>IWS Dashboard</h1>
     </div>
     <div class="profile">
-        <h3>Ciao <?=$username?></h3>
+        <h3>Hi <?=$username?></h3>
         <a href="index.php?action=logout">
             <button class="btn btn-action tooltip tooltip-bottom" data-tooltip="Logout">
 
