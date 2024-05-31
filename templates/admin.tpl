@@ -231,7 +231,7 @@
                 <div>
                     <p class="text-sm text-gray-500">Show</p>
 
-                    <p class="text-2xl font-medium text-gray-900">Forms & Questions</p>
+                    <p class="text-2xl font-medium text-gray-900">Forms</p>
                 </div>
 
                 <span class="rounded-full bg-blue-100 p-3 text-blue-600">
