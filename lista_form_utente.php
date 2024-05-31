@@ -16,6 +16,7 @@ $username = $_SESSION['username'];
 $id_utente = UserRepository::getID($username);
 
 
+
     $lista_form_fatti = NoteRepository::listFormCompleted($id_utente);
     $lista_form_non_fatti = NoteRepository::listFormNotCompleted($id_utente);
 

@@ -129,11 +129,9 @@ if(isset($_GET['id'])) {
 } else {
     $id_form = 1;
 }
-var_dump($id_form);
 
 
 $questions = Model\NoteRepository::listQuestionByForm($id_form);
-
 if (isset($_GET['question_1'])) {
 
     $risposte = [];
@@ -142,6 +140,7 @@ if (isset($_GET['question_1'])) {
         //risposte in un vettore, serve per l'email
         $risposte[$i] = $domanda;
     }
+
     Model\NoteRepository::salvaRisposte($id_utente, $id_form, $questions, $risposte);
     //email utente
     $email_user = Model\UserRepository::getEmail($username);
@@ -150,9 +149,9 @@ if (isset($_GET['question_1'])) {
     //invio_email($email_user, $risposte, $questions, $username);
 
 
-
 }
 
 echo $template->render('form', [
     'questions' => $questions,
+    'id_form' => $id_form
 ]);
