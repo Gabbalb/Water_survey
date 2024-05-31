@@ -85,7 +85,7 @@
         <div class="mt-8 sm:mt-12" id="stats">
             <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center">
-                    <dt class="order-last text-lg font-medium text-gray-500">Utenti</dt>
+                    <dt class="order-last text-lg font-medium text-gray-500">Users</dt>
 
                     <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl">
                         <?= $nusers ?>
@@ -93,13 +93,13 @@
                 </div>
 
                 <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center">
-                    <dt class="order-last text-lg font-medium text-gray-500">Form Creati</dt>
+                    <dt class="order-last text-lg font-medium text-gray-500">Created Form</dt>
 
                     <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl"><?= $nform ?></dd>
                 </div>
 
                 <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center">
-                    <dt class="order-last text-lg font-medium text-gray-500">Risposte Ricevute</dt>
+                    <dt class="order-last text-lg font-medium text-gray-500">Answers</dt>
 
                     <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl"><?= $nansw ?></dd>
                 </div>
@@ -113,9 +113,9 @@
     <a href="registrazione.php"><article class="rounded-lg border border-gray-100 bg-white p-6">
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm text-gray-500">Aggiungi</p>
+                    <p class="text-sm text-gray-500">Add</p>
 
-                    <p class="text-2xl font-medium text-gray-900">Nuovo Utente</p>
+                    <p class="text-2xl font-medium text-gray-900">New User</p>
                 </div>
 
                 <span class="rounded-full bg-blue-100 p-3 text-blue-600">
@@ -140,9 +140,9 @@
     <a href="visualizza.php?query=1"><article class="rounded-lg border border-gray-100 bg-white p-6">
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm text-gray-500">Visualizza</p>
+                    <p class="text-sm text-gray-500">Show</p>
 
-                    <p class="text-2xl font-medium text-gray-900">Utenti</p>
+                    <p class="text-2xl font-medium text-gray-900">Users</p>
                 </div>
 
                 <span class="rounded-full bg-blue-100 p-3 text-blue-600">
@@ -173,35 +173,11 @@
 
         </article></a> <!--VISUALIZZA UTENTI-->
 
-    <a href="visualizza.php?query=2"><article class="rounded-lg border border-gray-100 bg-white p-6">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-sm text-gray-500">Visualizza</p>
-
-                    <p class="text-2xl font-medium text-gray-900">Risposte</p>
-                </div>
-
-                <span class="rounded-full bg-blue-100 p-3 text-blue-600">
-      <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-8 w-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-      >
-        <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 9V19.4C3 19.9601 3 20.2399 3.10899 20.4538C3.20487 20.642 3.35774 20.7952 3.5459 20.8911C3.7596 21 4.0395 21 4.59846 21H15.0001M17 8L13 12L11 10M7 13.8002V6.2002C7 5.08009 7 4.51962 7.21799 4.0918C7.40973 3.71547 7.71547 3.40973 8.0918 3.21799C8.51962 3 9.08009 3 10.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07969 21.0002 6.19978L21.0002 13.7998C21.0002 14.9199 21.0002 15.48 20.7822 15.9078C20.5905 16.2841 20.2842 16.5905 19.9079 16.7822C19.4805 17 18.9215 17 17.8036 17H10.1969C9.07899 17 8.5192 17 8.0918 16.7822C7.71547 16.5905 7.40973 16.2842 7.21799 15.9079C7 15.4801 7 14.9203 7 13.8002Z"    </span>
-            </div>
-
-        </article></a> <!--VISUALIZZA FORM-->
 
     <a href="visualizza.php?query=4"><article class="rounded-lg border border-gray-100 bg-white p-6">
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm text-gray-500">Crea</p>
+                    <p class="text-sm text-gray-500">Create</p>
 
                     <p class="text-2xl font-medium text-gray-900">Form</p>
                 </div>
@@ -228,9 +204,9 @@
     <a href="visualizza.php?query=3"><article class="rounded-lg border border-gray-100 bg-white p-6">
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm text-gray-500">Crea</p>
+                    <p class="text-sm text-gray-500">Create</p>
 
-                    <p class="text-2xl font-medium text-gray-900">Domanda</p>
+                    <p class="text-2xl font-medium text-gray-900">Question</p>
                 </div>
 
                 <span class="rounded-full bg-blue-100 p-3 text-blue-600">
@@ -253,9 +229,9 @@
     <a href="visualizza.php?query=2"><article class="rounded-lg border border-gray-100 bg-white p-6">
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm text-gray-500">Visualizza</p>
+                    <p class="text-sm text-gray-500">Show</p>
 
-                    <p class="text-2xl font-medium text-gray-900">Domande</p>
+                    <p class="text-2xl font-medium text-gray-900">Forms & Questions</p>
                 </div>
 
                 <span class="rounded-full bg-blue-100 p-3 text-blue-600">
